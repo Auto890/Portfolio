@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Calendar, MapPin, Award, Users, Heart, BookOpen, X } from "lucide-react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 import {
   Dialog,
   DialogContent,
@@ -108,7 +109,7 @@ export function ActivitiesSection() {
                     onClick={() => setSelectedImage(activity.image)}
                   >
                     <Image
-                      src={activity.image}
+                      src={getAssetPath(activity.image)}
                       alt={activity.title}
                       width={600}
                       height={300}
@@ -161,7 +162,7 @@ export function ActivitiesSection() {
                   <X size={32} />
                 </button>
                 <Image
-                  src={selectedImage}
+                  src={getAssetPath(selectedImage)}
                   alt="Full size image"
                   width={1200}
                   height={600}
