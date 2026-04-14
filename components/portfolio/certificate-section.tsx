@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Award, ExternalLink } from "lucide-react"
+import { getAssetPath } from "@/lib/utils"
 
 const certificates = [
   {
@@ -43,7 +44,7 @@ export function CertificateSection() {
               {certificate.image && (
                 <div className="relative overflow-hidden bg-muted/10">
                   <Image
-                    src={certificate.image}
+                    src={getAssetPath(certificate.image)}
                     alt={certificate.title}
                     width={640}
                     height={360}
