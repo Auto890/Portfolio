@@ -76,6 +76,7 @@ const activities = [
     color: "bg-orange-500/20 text-orange-400",
     image: "/Network.jpg",
   },
+  
 ];
 
 export function ActivitiesSection() {

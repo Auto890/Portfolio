@@ -3,51 +3,19 @@ import Link from "next/link"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Movie Rental System",
     description:
-      "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
-    skills: ["Next.js", "Stripe", "Prisma", "PostgreSQL"],
+      "A simple Movie Rental Web Application built using PHP, MySQL, and HTML/CSS.This project allows users to browse movies, add them to a cart, and rent them online.",
+    skills: ["PHP", "MySQL", "HTML/CSS"],
     github: "https://github.com",
-    live: "https://example.com",
   },
   {
-    title: "Task Management App",
+    title: "Wordle IT - 2D Game Project",
     description:
-      "A collaborative project management tool with drag-and-drop functionality, real-time updates, and team collaboration features.",
+      "This project is English IT vocabulary guessing game developed as part of a CS4773 Computer Graphics.",
     skills: ["React", "Node.js", "Socket.io", "MongoDB"],
     github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "AI Content Generator",
-    description:
-      "An AI-powered application that generates blog posts, social media content, and marketing copy using advanced language models.",
-    skills: ["TypeScript", "OpenAI", "Vercel AI SDK", "Tailwind"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Portfolio Dashboard",
-    description:
-      "A personal finance dashboard for tracking investments, analyzing portfolio performance, and visualizing financial data.",
-    skills: ["React", "Chart.js", "REST API", "CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Weather Application",
-    description:
-      "A beautiful weather app with location-based forecasts, interactive maps, and severe weather alerts.",
-    skills: ["React Native", "Weather API", "Geolocation", "Animations"],
-    github: "https://github.com",
-  },
-  {
-    title: "Blog Platform",
-    description:
-      "A modern blogging platform with markdown support, SEO optimization, and a powerful content management system.",
-    skills: ["Next.js", "MDX", "Contentful", "Vercel"],
-    github: "https://github.com",
-    live: "https://example.com",
+
   },
 ]
 
@@ -80,17 +48,6 @@ export function ProjectsSection() {
                       aria-label="View GitHub repository"
                     >
                       <Github size={20} />
-                    </Link>
-                  )}
-                  {project.live && (
-                    <Link
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                      aria-label="View live project"
-                    >
-                      <ExternalLink size={20} />
                     </Link>
                   )}
                 </div>
