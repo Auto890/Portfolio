@@ -16,6 +16,13 @@ const projects = [
     skills: ["Power BI", "Excel"],
     github: "https://github.com/Auto890/covid-risk-analysis-dashboard",
   },
+  {
+    title: "Football Club Management System",
+    description:
+      "Developed a full-stack web application using React, PHP, and MySQL to manage football club members.",
+    skills: ["React", "PHP", "MySQL", "CSS", "Axios"],
+    github: "https://github.com/Auto890/Footballteamm",
+  },
 ]
 
 export function ProjectsSection() {

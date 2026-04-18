@@ -80,7 +80,7 @@ const activities = [
     location: "Huachiew Chalermprakiet University",
     icon: BookOpen,
     color: "bg-orange-500/20 text-orange-400",
-    image: "/BI.jpg",
+    image: "/Bi.jpg",
   },
   
 ];
