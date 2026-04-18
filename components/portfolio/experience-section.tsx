@@ -15,10 +15,10 @@ const experiences = [
       "Gained experience in a large organization, strengthening customer service, teamwork, and task ownership while working with professional standards.",
   },
   {
-    title: "ช่วยธุรกิจส่วนตัว รีสอร์ท ที่ เพชรบูรณ์ (ภูหมอกแก้ว ภูทับเบิก)",
+    title: "Assisted Family Business – Resort in Phu Thap Boek, Phetchabun (Phu Mok Kaew Resort)",
     period: "Freelance",
     description:
-      "ช่วยธุรกิจส่วนตัว ทำโฆษณาและออกแบบป้ายราคาต่างๆ สำหรับกิจการรีสอร์ท",
+      "Assisted family business by creating advertisements and designing price signs for the resort.",
     images: ["/P11.png", "/P12.png"],
   },
 ];
