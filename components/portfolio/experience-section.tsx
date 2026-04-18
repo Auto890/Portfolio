@@ -1,7 +1,11 @@
-import { ExternalLink } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { ExternalLink, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { getAssetPath } from "@/lib/utils";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const experiences = [
   {
@@ -15,11 +19,13 @@ const experiences = [
     period: "Freelance",
     description:
       "ช่วยธุรกิจส่วนตัว ทำโฆษณาและออกแบบป้ายราคาต่างๆ สำหรับกิจการรีสอร์ท",
-    images: ["/P11.png", "/P12.png", "/P13.png"],
+    images: ["/P11.png", "/P12.png"],
   },
 ];
 
 export function ExperienceSection() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-4xl">
@@ -51,7 +57,11 @@ export function ExperienceSection() {
               {exp.images && exp.images.length > 0 && (
                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {exp.images.map((img, idx) => (
-                    <div key={idx} className="relative aspect-video sm:aspect-square overflow-hidden rounded-xl border border-border">
+                    <div 
+                      key={idx} 
+                      className="relative aspect-video sm:aspect-square overflow-hidden rounded-xl border border-border cursor-zoom-in"
+                      onClick={() => setSelectedImage(img)}
+                    >
                       <Image
                         src={getAssetPath(img)}
                         alt={`Experience image ${idx + 1}`}
@@ -65,8 +75,30 @@ export function ExperienceSection() {
             </article>
           ))}
         </div>
+
+        {/* Image Modal */}
+        {selectedImage && (
+          <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+            <DialogContent className="max-w-4xl p-0 bg-transparent border-0" showCloseButton={false}>
+              <div className="relative w-full">
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+                >
+                  <X size={32} />
+                </button>
+                <Image
+                  src={getAssetPath(selectedImage)}
+                  alt="Full size image"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
+        )}
       </div>
     </section>
   );
 }
-

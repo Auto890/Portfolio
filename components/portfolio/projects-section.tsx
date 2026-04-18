@@ -21,7 +21,7 @@ const projects = [
     description:
       "This project is a basic React application built to practice frontend development skills.It focuses on creating a simple and interactive user interface using React., PHP, and MySQL to manage football club members.",
     skills: ["React", "PHP", "MySQL", "CSS", "Axios"],
-    github: "https://github.com/Auto890/Footballteamm",
+    github: "https://github.com/Auto890/Footballteam",
   },
 ]
 
