@@ -1,5 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 const experiences = [
   {
@@ -7,6 +9,13 @@ const experiences = [
     period: "2-month internship",
     description:
       "Gained experience in a large organization, strengthening customer service, teamwork, and task ownership while working with professional standards.",
+  },
+  {
+    title: "ช่วยธุรกิจส่วนตัว รีสอร์ท ที่ เพชรบูรณ์ (ภูหมอกแก้ว ภูทับเบิก)",
+    period: "Freelance",
+    description:
+      "ช่วยธุรกิจส่วนตัว ทำโฆษณาและออกแบบป้ายราคาต่างๆ สำหรับกิจการรีสอร์ท",
+    images: ["/P11.png", "/P12.png", "/P13.png"],
   },
 ];
 
@@ -16,7 +25,7 @@ export function ExperienceSection() {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Internship Experience
+            Experience & Involvements
           </h2>
           <div className="mx-auto h-1 w-20 rounded-full bg-primary" />
         </div>
@@ -38,6 +47,21 @@ export function ExperienceSection() {
               <p className="mt-4 text-muted-foreground leading-7">
                 {exp.description}
               </p>
+              
+              {exp.images && exp.images.length > 0 && (
+                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {exp.images.map((img, idx) => (
+                    <div key={idx} className="relative aspect-video sm:aspect-square overflow-hidden rounded-xl border border-border">
+                      <Image
+                        src={getAssetPath(img)}
+                        alt={`Experience image ${idx + 1}`}
+                        fill
+                        className="object-contain hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </div>
@@ -45,3 +69,4 @@ export function ExperienceSection() {
     </section>
   );
 }
+

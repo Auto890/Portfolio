@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Football Club Management System",
     description:
-      "Developed a full-stack web application using React, PHP, and MySQL to manage football club members.",
+      "This project is a basic React application built to practice frontend development skills.It focuses on creating a simple and interactive user interface using React., PHP, and MySQL to manage football club members.",
     skills: ["React", "PHP", "MySQL", "CSS", "Axios"],
     github: "https://github.com/Auto890/Footballteamm",
   },
