@@ -14,10 +14,10 @@ const activities = [
   {
     id: 1,
     title:
-      "Digital Innovation and Agentic AI in the Next Decade & Knowledge Sharing: Future skill for future work (Metro System)",
+      "Digital Innovation and Agentic AI in the Next Decade & Knowledge Sharing: Future skillfor future work",
     description:
       "A special lecture and technology tour focused on preparing computer science students for the modern IT workforce. The session covered the evolution of digital innovation, the future impact of Agentic AI on the business world, and the essential skills required for future careers. The program also included a visit to the Technology Demonstration Center to experience real-world, cutting-edge IT solutions.",
-    location: "Bangkok, Thailand",
+    location: "Bangkok, Metro System",
     icon: Award,
     color: "bg-yellow-500/20 text-yellow-400",
     image: "/Metro-System.jpg",
@@ -27,8 +27,7 @@ const activities = [
     title: "Software Project Initiation and Cost Estimation (Indigy)",
     description:
       "A special lecture focused on the foundational steps of launching a software project for a startup. The session covered how to turn an idea into a practical plan by defining the project scope, planning a Minimum Viable Product (MVP), and accurately estimating development costs, including human resources and infrastructure.",
-    date: "2024 - Present",
-    location: "Online & Offline",
+    location: "Huachiew Chalermprakiet University",
     icon: Users,
     color: "bg-blue-500/20 text-blue-400",
     image: "/Software-Project-Initiation-and-Cost-Estimation.jpg",
@@ -38,7 +37,7 @@ const activities = [
     title: "Business Transformation and Business Use Case (Bytedance)",
     description:
       "An experience-sharing session focused on Business Transformation and practical Business Use Cases. The lecture explored how companies leverage digital technologies to adapt their business models, solve real-world industry challenges, and drive innovation within a startup environment.",
-    location: "GitHub",
+    location: "Huachiew Chalermprakiet University",
     icon: Heart,
     color: "bg-pink-500/20 text-pink-400",
     image: "/Lark.jpg",
@@ -48,7 +47,7 @@ const activities = [
     title: "ERP for Digital Business Development (Metro System)",
     description:
       "A hands-on workshop and special lecture focusing on Enterprise Resource Planning (ERP) systems. The session explored how to utilize ERP software to integrate core business processes, improve operational efficiency, and drive digital transformation within an organization.",
-    location: "Chulalongkorn University",
+    location: "Huachiew Chalermprakiet University",
     icon: BookOpen,
     color: "bg-green-500/20 text-green-400",
     image: "/ERP.jpg",
@@ -56,11 +55,9 @@ const activities = [
   {
     id: 5,
     title: "Geospatial Analysis (TRUE DIGITAL GROUP CO., LTD.)",
-    category: "Mentoring",
     description:
       "A hands-on workshop and lecture focused on analyzing and visualizing location-based data. The session covered techniques for mapping geographical information to uncover spatial patterns, trends, and actionable insights.",
-    date: "June - August 2024",
-    location: "Bangkok, Thailand",
+    location: "Huachiew Chalermprakiet University",
     icon: Users,
     color: "bg-purple-500/20 text-purple-400",
     image: "/Kni.jpg",
@@ -68,14 +65,22 @@ const activities = [
   {
     id: 6,
     title: "University Network Infrastructure",
-    category: "Writing",
     description:
       "Exploring connectivity beyond standard Wi-Fi. This involved analyzing system strengths and weaknesses to develop practical solutions. The experience provided a deep understanding of enterprise-level network architecture and management, building a strong foundation for a future career as an IT professional.",
-    date: "2023 - Present",
-    location: "Online",
+    location: "Huachiew Chalermprakiet University",
     icon: BookOpen,
     color: "bg-orange-500/20 text-orange-400",
     image: "/Network.jpg",
+  },
+   {
+    id: 7,
+    title: "Data analytics and visualization by MS-Power BI and MS-Power Automate (Samsonite)",
+    description:
+      "A special lecture and hands-on workshop focused on practical data analytics. The session covered how to transform raw data into interactive, visual dashboards using MS Power BI, and how to automate data workflows and business processes using MS Power Automate.",
+    location: "Huachiew Chalermprakiet University",
+    icon: BookOpen,
+    color: "bg-orange-500/20 text-orange-400",
+    image: "/Bi.jpg",
   },
   
 ];
@@ -123,9 +128,6 @@ export function ActivitiesSection() {
                     <IconComponent size={24} />
                   </div>
                   <div className="flex-1">
-                    <span className="text-xs font-medium text-primary uppercase tracking-wider">
-                      {activity.category}
-                    </span>
                     <h3 className="text-lg font-semibold text-foreground mt-1 group-hover:text-primary transition-colors">
                       {activity.title}
                     </h3>
@@ -137,10 +139,6 @@ export function ActivitiesSection() {
                 </p>
 
                 <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">
-                  <div className="flex items-center gap-1.5">
-                    <Calendar size={14} className="text-primary" />
-                    <span>{activity.date}</span>
-                  </div>
                   <div className="flex items-center gap-1.5">
                     <MapPin size={14} className="text-primary" />
                     <span>{activity.location}</span>

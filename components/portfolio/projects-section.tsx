@@ -3,50 +3,18 @@ import Link from "next/link"
 
 const projects = [
   {
-    title: "Movie Rental System",
+    title: "Movie Rental",
     description:
-      "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
-    skills: ["Next.js", "Stripe", "Prisma", "PostgreSQL"],
-    github: "https://github.com",
+      "This project is a Movie Rental Web Application developed using PHP and MySQL.It allows users to browse movies, add them to a cart, and rent them online.",
+    skills: ["PHP", "MySQL", "HTML", "CSS", "Bootstrap"],
+    github: "https://github.com/Auto890/movie_rental",
   },
   {
-    title: "Task Management App",
+    title: "COVID-19 Risk Analysis Dashboard",
     description:
-      "A collaborative project management tool with drag-and-drop functionality, real-time updates, and team collaboration features.",
-    skills: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "AI Content Generator",
-    description:
-      "An AI-powered application that generates blog posts, social media content, and marketing copy using advanced language models.",
-    skills: ["TypeScript", "OpenAI", "Vercel AI SDK", "Tailwind"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Portfolio Dashboard",
-    description:
-      "A personal finance dashboard for tracking investments, analyzing portfolio performance, and visualizing financial data.",
-    skills: ["React", "Chart.js", "REST API", "CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Weather Application",
-    description:
-      "A beautiful weather app with location-based forecasts, interactive maps, and severe weather alerts.",
-    skills: ["React Native", "Weather API", "Geolocation", "Animations"],
-    github: "https://github.com",
-  },
-  {
-    title: "Blog Platform",
-    description:
-      "A modern blogging platform with markdown support, SEO optimization, and a powerful content management system.",
-    skills: ["Next.js", "MDX", "Contentful", "Vercel"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "This project analyzes COVID-19 risk data in Thailand using Power BI. The objective is to identify patterns of risk distribution across provinces, gender, and risk factors to support data-driven insights.",
+    skills: ["Power BI", "Excel"],
+    github: "https://github.com/Auto890/covid-risk-analysis-dashboard",
   },
 ]
 
