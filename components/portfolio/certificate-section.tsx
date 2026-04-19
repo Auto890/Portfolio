@@ -1,6 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image"
-import { Award, ExternalLink } from "lucide-react"
+import { Award, ExternalLink, X } from "lucide-react"
 import { getAssetPath } from "@/lib/utils"
+import {
+  Dialog,
+  DialogContent,
+} from "@/components/ui/dialog"
 
 const certificates = [
   {
@@ -19,9 +26,19 @@ const certificates = [
       "Successfully completed a course covering fundamental data management skills using Excel, including data handling and analysis.",
     image: "/P2.png",
   },
+  {
+  title: "Startup Thailand League 2025 (University Level)",
+  issuer: "Faculty of Business Administration, Huachiew Chalermprakiet University",
+  year: "2025",
+  description:
+    "Participated in the Startup Thailand League 2025 (9th edition) at the university level.",
+  image: "/P3.jpg",
+  },
 ]
 
 export function CertificateSection() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <section id="certificates" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
@@ -42,13 +59,16 @@ export function CertificateSection() {
               className="group overflow-hidden rounded-3xl border border-border bg-card/80 shadow-sm shadow-muted/10 transition duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-md"
             >
               {certificate.image && (
-                <div className="relative overflow-hidden bg-muted/10">
+                <div 
+                  className="relative overflow-hidden bg-muted/10 cursor-pointer group/img"
+                  onClick={() => setSelectedImage(certificate.image)}
+                >
                   <Image
                     src={getAssetPath(certificate.image)}
                     alt={certificate.title}
                     width={640}
                     height={360}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-cover group-hover/img:brightness-75 transition-all duration-300"
                   />
                 </div>
               )}
@@ -73,6 +93,29 @@ export function CertificateSection() {
             </article>
           ))}
         </div>
+
+        {/* Image Modal */}
+        {selectedImage && (
+          <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+            <DialogContent className="max-w-4xl p-0 bg-transparent border-0" showCloseButton={false}>
+              <div className="relative w-full">
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+                >
+                  <X size={32} />
+                </button>
+                <Image
+                  src={getAssetPath(selectedImage)}
+                  alt="Full size certificate"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
+        )}
       </div>
     </section>
   )
